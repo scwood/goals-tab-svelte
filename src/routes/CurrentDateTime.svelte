@@ -10,21 +10,11 @@
 	onDestroy(() => clearInterval(interval));
 </script>
 
-<div class="date">
-	{now.toLocaleTimeString(undefined, { timeStyle: 'short' })}
+<div class="text-center">
+	<div class="font-semibold text-4xl">
+		{now.toLocaleTimeString(undefined, { timeStyle: 'short' })}
+	</div>
+	<div class="font-semibold text-lg">
+		{now.toLocaleDateString(undefined, { dateStyle: 'long' })}
+	</div>
 </div>
-<div class="time">
-	{now.toLocaleDateString(undefined, { dateStyle: 'long' })}
-</div>
-
-<style>
-	.date {
-		font-weight: 600;
-		font-size: 36px;
-	}
-
-	.time {
-		font-weight: 600;
-		font-size: 18px;
-	}
-</style>

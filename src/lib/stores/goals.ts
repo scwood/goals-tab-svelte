@@ -7,4 +7,7 @@ export interface Goal {
 	timesCompleted: number;
 }
 
-export const goals = createLocalStorageStore<Goal[]>({ key: 'goals', defaultValue: [] });
+export const goals = createLocalStorageStore<Goal[]>({
+	key: 'goals-tab-svelte/goals',
+	defaultValue: []
+});
